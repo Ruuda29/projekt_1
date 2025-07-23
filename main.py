@@ -70,7 +70,7 @@ print(oddelovac)
 
 if (
     not cislo_textu.isnumeric()
-    or int(cislo_textu) < 1
+    or not int(cislo_textu)
     or int(cislo_textu) > len(TEXTS)
 ):
     print(
