@@ -100,18 +100,19 @@ pouze_mala_pismena = [slovo for slovo in rozdeleny_text if slovo.islower()]
 print(f"There are {len(pouze_mala_pismena)} lowercase words.")
 
 ## Počet čísel
-cisla_v_textu = [slovo for slovo in rozdeleny_text if slovo.isnumeric()]
+cisla_v_textu = [int(slovo) for slovo in rozdeleny_text if slovo.isnumeric()]
 print(f"There are {len(cisla_v_textu)} numeric strings.")
 
 ## Suma čísel
-seznam_cisel = [int(cislo) for cislo in cisla_v_textu]
-print(f"The sum of all the numbers {sum(seznam_cisel)}.")
+print(f"The sum of all the numbers {sum(cisla_v_textu)}.")
 
 print(oddelovac)
 
 ## Výskyt slov
-print(f"LEN|{'OCCURRENCES'.center(25)}|NR.")
-print(oddelovac)
+print(
+    f"LEN|{'OCCURRENCES'.center(25)}|NR.\n"
+    f"{oddelovac}"
+)
 
 vyskyt_slov = {}
 
